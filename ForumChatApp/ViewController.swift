@@ -27,8 +27,6 @@ class ViewController: JSQMessagesViewController,UIImagePickerControllerDelegate,
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         messages.append(JSQMessage(senderId: self.senderId, displayName: self.senderDisplayName, text: text))
         messages.append(JSQMessage(senderId: "12", displayName: "raam", text: "This is a random test reply"))
-        self.inputToolbar.contentView.textView.endEditing(true)
-        self.inputView?.endEditing(true)
         collectionView.reloadData()
         
     }
